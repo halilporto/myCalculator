@@ -1,5 +1,6 @@
 var inputArea = $('#calculator');
 var operator = $('.operator');
+var historyData = [];
 
 //Allow only specified keys
 var allowedCodes = ['+', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '/', '-', 'Backspace', 'ArrowRight', 'ArrowLeft', '*'];
@@ -145,6 +146,21 @@ function calculatorMain() {
                     $('.result-container').show();
                 }
             }
+
+        
         })
     };
+    // History Generation
+    var historyinput =  inputArea.val() + "=" + $("#result").text();
+    if (historyData.length < 5) {
+        historyData.push(historyinput);
+    } else{
+        historyData.splice(0,1);
+        historyData.push(historyinput);
+    }
+    $( "#history" ).html( "" )
+    historyData.forEach(data => {
+        $( "#history" ).append( "<p>" + data +"</p>" );        
+    });
+    
 };
