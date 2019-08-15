@@ -143,11 +143,8 @@ function calculatorMain() {
                     $("#result").text(res.toFixed(2));
                     $('.warning-container').hide();
                     $('.result-container').show();
-
                 }
-
             }
-
         })
     };
 };
