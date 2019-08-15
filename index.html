@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Calculator</title>
+    <title>Halil FX-500</title>
 </head>
+
 <body>
-    
+    <div class="spacer"></div>
+
+    <div class="d-flex justify-content-center">
+
+        <div class="calculator-container">
+            <!-- Header -->
+            <div class="header">
+                Halil FX-500
+            </div>
+            <hr>
+            <!-- Text Input Area -->
+            <div class="row main-input-container">
+                <input type="text" class="maininput" id="calculator" value=''>
+            </div>
+            <hr>
+            <!-- Number and Operators Area -->
+            <div class="main-operation-container">
+                <div class="row number-rows">
+                    <div class="col">
+                        <button id="one" class="number">1</button>
+                    </div>
+                    <div class="col">
+                        <button id="two" class="number">2</button>
+                    </div>
+                    <div class="col">
+                        <button id="three" class="number">3</button>
+                    </div>
+                </div>
+                <div class="row number-rows">
+                    <div class="col">
+                        <button id="four" class="number">4</button>
+                    </div>
+                    <div class="col">
+                        <button id="five" class="number">5</button>
+                    </div>
+                    <div class="col">
+                        <button id="six" class="number">6</button>
+                    </div>
+                </div>
+                <div class="row number-rows">
+                    <div class="col">
+                        <button id="seven" class="number">7</button>
+                    </div>
+                    <div class="col">
+                        <button id="eight" class="number">8</button>
+                    </div>
+                    <div class="col">
+                        <button id="nine" class="number">9</button>
+                    </div>
+                </div>
+                <div class="row number-rows">
+                    <div class="col">
+                        <button id="zero" class="number">0</button>
+                    </div>
+                    <div class="col">
+                        <button id="dot" class="number">.</button>
+                    </div>
+                    <div class="col">
+                        <button id="delete-button" class="delete">Del</button>
+                    </div>
+                </div>
+
+                <div class="row number-rows">
+                    <div class="col">
+                        <button id="add-button" class="operator">+</button>
+                    </div>
+                    <div class="col">
+                        <button id="sub-button" class="operator">-</button>
+                    </div>
+                    <div class="col">
+                        <button id="mul-button" class="operator">*</button>
+                    </div>
+                    <div class="col">
+                        <button id="div-button" class="operator">/</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Calculate Button and Results Area -->
+            <div class="calculate-results-container">
+                <div class="row">
+                    <button id="res-button" class="calculate">Result</button>
+                </div>
+                <br>
+                <div class="result-container">
+                    Result: <span id="result" class="output"></span>
+                </div>
+                <div class="warning-container">
+                    Warning: <span id="warning" class="output"></span>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+
 </body>
+
 </html>
