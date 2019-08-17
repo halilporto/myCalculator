@@ -73,3 +73,18 @@ button.calculate{
     display: none;
     background-color: red;
 }
+.history-buttons{
+    padding: 0px;
+    height: 0px;
+    font-size: 9px;
+
+}
+.history-top-hr{
+    margin-bottom: 0px;
+}
+#history-container{
+    text-align: right;
+    align-content: right;
+    display: none;
+    padding: 0 50px;
+}

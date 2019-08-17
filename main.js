@@ -12,10 +12,9 @@ $(inputArea).bind({
             $('.warning-container').hide();
             $('.result-container').hide();
             return true;
-        } else if(e.key == "Enter"){
-            calculatorMain();    
-        }else
-        {
+        } else if (e.key == "Enter") {
+            calculatorMain();
+        } else {
             return false;
         }
     }
@@ -49,13 +48,13 @@ function deleteInput() {
 $(".calculate").on("click", function () {
 
     calculatorMain();
-    
+
 });
 
 
 //Calculation
 function calculatorMain() {
-    
+
     var inputArea = $('#calculator');
     $('.result-container').hide();
 
@@ -135,8 +134,10 @@ function calculatorMain() {
 
                     if (res < 1) {
                         $("#result").text(res.toPrecision(2));
+
                     } else {
                         $("#result").text(res.toFixed(2));
+
                     };
 
                 } else {
@@ -144,23 +145,36 @@ function calculatorMain() {
                     $("#result").text(res.toFixed(2));
                     $('.warning-container').hide();
                     $('.result-container').show();
-                }
+                };
             }
 
-        
+
         })
+
+        // History Generation
+
+
+        var historyinput = inputArea.val() + "=" + $("#result").text();
+        if (historyData.length < 5) {
+            historyData.push(historyinput);
+        } else {
+            historyData.splice(0, 1);
+            historyData.push(historyinput);
+        }
+        $("#history").html("");
+        historyData.forEach(data => {
+            $("#history").append("<ul>" + data + "</ul>");
+        });
     };
-    // History Generation
-    var historyinput =  inputArea.val() + "=" + $("#result").text();
-    if (historyData.length < 5) {
-        historyData.push(historyinput);
-    } else{
-        historyData.splice(0,1);
-        historyData.push(historyinput);
-    }
-    $( "#history" ).html( "" )
-    historyData.forEach(data => {
-        $( "#history" ).append( "<p>" + data +"</p>" );        
-    });
-    
+
+
 };
+
+$("#history-show-hide").on("click", function () {
+    $("#history-container").toggle();
+});
+
+$("#history-delete").on("click", function () {
+    historyData = [];
+    $("#history").html("");
+});

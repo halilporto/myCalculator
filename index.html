@@ -29,19 +29,25 @@
             <div class="row main-input-container">
                 <input type="text" class="maininput" id="calculator" value=''>
             </div>
-            <hr>
-            <div class="history-container" id="">
+            <hr class="history-top-hr">
+            <div class="container history-buttons">
                 <div class="row text-center">
-                    <div class="col text-center">Goster</div>
-                    <div class="col text-center">Sil</div>
-                    <div class="row" id="history">
-
-
+                    <div class="col-sm">
+                        <button id="history-show-hide">Show History</button>
+                    </div>
+                    <div class="col-sm">
+                        <button id="history-delete">Delete History</button>
                     </div>
 
                 </div>
             </div>
-            <hr>
+            <br>
+            <div class="row" id="history-container">
+                <ul id="history">
+
+                </ul>
+                <hr>
+            </div>
 
             <!-- Number and Operators Area -->
             <div class="main-operation-container">
